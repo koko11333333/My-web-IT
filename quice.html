@@ -1,0 +1,144 @@
+
+
+
+
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>คำถามที่พบบ่อย (FAQ) - Modern</title>
+  
+  <!-- Google Font: Kanit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="quice.css">
+  
+
+</head>
+<body>
+
+   <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="logo"><img src="logo.png" alt="โลโก้"></a>
+    <div class="menu">
+        <a href="index.html">หน้าแรก</a>
+      <a href="solve.html" >แก้ปัญหาพื้นฐาน</a> 
+      <a href="learn.html" >เรียนรู้อุปกรณ์</a>
+      <a href="quice.html" class="active">คำถามทั่วไป</a>
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="contact.html">ติดต่อเรา</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">คำถามทั่วไปเกี่ยวกับ IT Support</h1>
+      <p class="sub">คำตอบรวดเร็ว สำหรับคำถามทั่วไปเกี่ยวกับบริการของเรา</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container main-grid">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="card">
+        <h2>หมวดหมู่</h2>
+        <div class="chips">
+          <button class="chip active" data-filter="all">ทั้งหมด</button>
+          <button class="chip" data-filter="account">คอมพิวเตอร์และอินเทอร์เน็ต</button>
+          <button class="chip" data-filter="payment">Windows</button>
+          <button class="chip" data-filter="technical">แอปขัดข้อง</button>
+          <button class="chip" data-filter="privacy">เครื่อง Printer</button>
+        </div>
+      </div>
+
+      <div class="card contact-extra">
+        <h3>ติดต่อเพิ่มเติม</h3>
+        <p>หากไม่พบคำถามที่ต้องการ ติดต่อทีม Support ของเราที่ 
+          <a href="mailto:supportit@gmail.com">supportit@gmail.com</a>
+        </p>
+      </div>
+    </aside>
+
+    <!-- FAQ Area -->
+    <section class="faq-area">
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="ค้นหาคำถาม เช่น &quot;วิธีสมัคร&quot;..." aria-label="ค้นหา FAQ">
+        <span class="search-hint">พิมพ์คำที่เกี่ยวข้อง แล้วกด Enter</span>
+      </div>
+
+      <div id="faqList" class="faq-list">
+        <details class="faq-item" data-category="account">
+          <summary>ถ้าคอมพิวเตอร์เปิดไม่ติด ควรทำอย่างไร?</summary>
+          <div class="answer">
+            <p>ตรวจสอบสายไฟและปลั๊กไฟก่อน จากนั้นลองกดปุ่มเปิดใหม่ หากยังไม่ติด ให้ตรวจสอบอะแดปเตอร์หรือ PSU อาจมีปัญหา แนะนำติดต่อฝ่าย IT</p>
+          </div>
+        </details>
+        <details class="faq-item" data-category="account">
+          <summary>อินเทอร์เน็ตช้า ควรแก้ไขอย่างไร?</summary>
+          <div class="answer">
+            <p>ลองรีสตาร์ทเราเตอร์หรือโมเด็มก่อน หากยังช้า อาจติดต่อผู้ให้บริการอินเทอร์เน็ต</p>
+          </div>
+        </details>
+
+        <details class="faq-item" data-category="payment">
+          <summary>ลืมรหัสผ่านเข้า Windows หรือระบบอีเมลต้องทำอย่างไร?</summary>
+          <div class="answer">
+            <p>กดปุ่ม “ลืมรหัสผ่าน” แล้วทำตามขั้นตอนรีเซ็ต หากไม่สามารถแก้ไขได้ ให้ติดต่อฝ่าย IT Support</p>
+          </div>
+        </details>
+
+        <details class="faq-item" data-category="technical">
+          <summary>แอปขัดข้อง ควรทำอย่างไรก่อน?</summary>
+          <div class="answer">
+            <ol>
+              <li>ปิดแอป แล้วเปิดใหม่</li>
+              <li>ล้างแคช/คุกกี้</li>
+              <li>ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="faq-item" data-category="privacy">
+          <summary>เครื่องพิมพ์ (Printer) ไม่ทำงานหรือพิมพ์ไม่ได้ ควรทำอย่างไร?</summary>
+          <div class="answer">
+            <p>ตรวจสอบการเชื่อมต่อ ปิด/เปิดเครื่องพิมพ์ใหม่ และตรวจสอบหมึก/กระดาษ หากยังมีปัญหาให้ติดตั้งไดรเวอร์ใหม่</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Quick Tips -->
+      <div class="card quick-tips">
+        <h3>เคล็ดลับด่วน</h3>
+        <ul>
+          <li>ลองค้นหาคีย์เวิร์ด เช่น "อินเทอร์เน็ต", "Windows"</li>
+          <li>ใช้ฟิลเตอร์หมวดหมู่ ถ้าต้องการคำตอบเฉพาะ</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer>
+    © 2025 Digital Technology Division.
+  </footer>
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJNW0ZG63F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QJNW0ZG63F');
+</script>
+  <!-- ตัวการ์ตูนโผล่มา -->
+  <img src="1.1.png" alt="การ์ตูน" class="cartoon" />
+  <script src="quice.js"></script>
+</body>
+</html>

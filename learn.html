@@ -1,0 +1,115 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เรียนรู้อุปกรณ์คอมพิวเตอร์ - Interactive 3D</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- model-viewer & confetti -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- CSS หลัก -->
+<link rel="stylesheet" href="learn.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="img/logo.png" alt="โลโก้"></a>
+  <div class="menu">
+       <a href="index.html">หน้าแรก</a>
+      <a href="solve.html" >แก้ปัญหาพื้นฐาน</a> 
+      <a href="learn.html" class="active">เรียนรู้อุปกรณ์</a>
+      <a href="quice.html">คำถามทั่วไป</a>
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="contact.html">ติดต่อเรา</a>
+      
+  </div>
+</nav>
+
+<div class="theme-toggle"><button id="themeBtn">🌙 Dark Mode</button></div>
+
+<header class="hero">
+  <h1>เรียนรู้อุปกรณ์คอมพิวเตอร์</h1>
+  <p>เลือกอุปกรณ์เพื่อดูโมเดล 3D และทำ Quiz เก็บคะแนนแบบมืออาชีพ</p>
+</header>
+
+<main class="content">
+  <aside class="device-list">
+    <h2>รายการอุปกรณ์</h2>
+    <input type="text" id="searchDevice" placeholder="🔍 ค้นหาอุปกรณ์...">
+    <ul id="deviceItems">
+      <li data-device="ups">UPS</li>
+      <li data-device="cpu">CPU</li>
+      <li data-device="mouse">เม้าส์ไร้สาย</li>
+      <li data-device="ram">RAM</li>
+      <li data-device="ssd">SSD</li>
+    </ul>
+  </aside>
+
+  <section class="device-detail">
+    <div class="description">
+      <h2 id="deviceTitle">ตัวอย่างเรียนรู้อุปกรณ์</h2>
+      <p id="deviceDesc">คลิกชื่ออุปกรณ์ด้านซ้ายเพื่อแสดงข้อมูล รูปภาพ และโมเดล 3D</p>
+    </div>
+
+    <div class="gallery" id="deviceGallery"></div>
+
+    <model-viewer id="deviceModel" src="models/p.glb" camera-controls auto-rotate camera-orbit="0deg 75deg 2.5m" shadow-intensity="1" alt="โมเดล 3D"></model-viewer>
+
+    <div class="device-interactive">
+      <div class="tab-buttons">
+        <button data-tab="learn" class="active">Learn</button>
+        <button data-tab="quiz">Quiz</button>
+        <button data-tab="tips">Tips</button>
+      </div>
+
+      <div class="tab-content">
+        <div class="learn-tab active">
+          <p id="learnText">ข้อมูลเรียนรู้ของอุปกรณ์จะแสดงที่นี่</p>
+        </div>
+
+        <div class="quiz-tab">
+          <div class="quiz-progress"><div class="progress-bar" id="quizProgress"></div></div>
+          <p id="quizQuestion">คำถามตัวอย่าง</p>
+          <ul id="quizOptions"></ul>
+          <p class="quiz-feedback"></p>
+          <div class="scoreboard" id="scoreboard" style="display:none;"></div>
+        </div>
+
+        <div class="tips-tab">
+        <div id="tipsCards">
+    <div class="tip-card">💡 เลือกอุปกรณ์ด้านซ้ายเพื่อดู Tips ของอุปกรณ์</div>
+  </div>
+</div>
+
+    </div>
+  </section>
+</main>
+
+<footer>© 2025 Digital Technology Division.</footer>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJNW0ZG63F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QJNW0ZG63F');
+</script>
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <img id="lightboxImg" src="">
+</div>
+<!-- JS หลัก -->
+<script src="learn.js"></script>
+
+</body>
+</html>

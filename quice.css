@@ -1,0 +1,443 @@
+:root {
+  /* ================= Main Colors ================= */
+  --main-color: #3b82f6;        /* น้ำเงินสด */
+  --accent-color: #60a5fa;      /* ฟ้าอ่อน */
+  --bg-gradient: linear-gradient(135deg,#1e3a8a,#3b82f6);
+  --bg-light: #f8fafc;
+  --text-dark: #111827;
+  --text-gray: #4b5563;
+  --shadow-lg: 0 12px 25px rgba(0,0,0,0.2);
+  /* ================= FAQ / Card Colors ================= */
+  --bg: #aec7e0;
+  --card: #E0F2FE;   /* ฟ้าอ่อน */
+  --muted: #3561b8;
+  --accent: #2563eb;
+}
+
+/* Reset & Body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif; /* เพิ่มตรงนี้ */
+}
+
+
+    /* ให้ทั้งหน้าใช้ฟอนต์ Kanit */
+    body, h1, h2, h3, h4, h5, h6, p, a, li, button, input, summary {
+      font-family: 'Kanit', sans-serif;
+    }
+ 
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background: url("1.3.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #0f172a;
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+/* ================= Navbar ================= */
+nav {
+  background: var(--bg-gradient);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+  animation: fadeSlideDown 1s ease-out;
+}
+
+nav .logo img {
+  height: 55px;
+  transition: transform 0.4s;
+}
+nav .logo img:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+nav .menu a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+nav .menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #fff;
+  transition: width 0.3s;
+}
+nav .menu a:hover::after,
+nav .menu a.active::after {
+  width: 100%;
+}
+
+/* ================= Header ================= */
+.site-header {
+  background: linear-gradient(90deg, rgba(37,99,235,0.12), rgba(37,99,235,0.02));
+  padding: 36px 0 24px;
+}
+
+.site-header .logo {
+  font-size: 22px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.site-header .sub {
+  color: var(--muted);
+}
+
+/* ================= Main Grid ================= */
+.main-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  padding-top: 18px;
+}
+
+/* ================= Sidebar & Cards ================= */
+.sidebar .card {
+  background: #E0F2FE;     /* ฟ้าอ่อน */
+  border: none; 
+}
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.04);
+}
+
+/* Chips / Categories */
+.chips {
+   background: #E0F2FE;   /* ฟ้าอ่อน */
+  border: none;          /* เอาเส้นออก */
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0f172a;
+  transition: all 0.3s ease;
+}
+
+.chip {
+background: #E0F2FE;  /* ฟ้าอ่อน */
+  border: none;          /* เอาเส้นออก */
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0f172a;
+  transition: all 0.3s ease;
+}
+.chip:hover {
+   background: #BAE6FD;
+}
+
+.chip.active {
+ background: var(--accent);
+  color: #fff;
+  border-color: transparent;
+}
+/* FAQ Items */
+.faq-item {
+  background: #E0F2FE;  /* ฟ้าอ่อน */
+  border: none;          /* เอาเส้นออก */
+  border-radius: 12px;
+  padding: 16px;
+  transition: background 0.3s ease;
+  font-size: 100px;   /* ปรับให้ใหญ่ขึ้นตามต้องการ */
+  font-weight: 700;  /* ตัวหนาให้เด่นขึ้น */
+}
+/* ขยายขนาดคำถาม */
+.faq-item summary {
+    font-size: 24px;   /* ปรับขนาดตามต้องการ */
+    font-weight: 700;  /* ตัวหนา */
+}
+
+.faq-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(37,99,235,0.15);
+  background: #BAE6FD;
+}
+
+/* ================= FAQ Area ================= */
+.faq-area {
+  min-height: 300px;
+}
+
+.search-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+#searchInput {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(15,23,42,0.06);
+  outline: none;
+  font-size: 15px;
+}
+
+.search-hint {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* FAQ Items */
+.faq-list {
+  display: grid;
+  gap: 12px;
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.faq-item {
+  background: #E0F2FE;   /* ฟ้าอ่อน สดใส */
+  border: 1px solid #38BDF8;
+  border-radius: 12px;
+  padding: 16px;
+  transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(37,99,235,0.15);
+  background: #BAE6FD;   /* ฟ้าเข้มขึ้นเล็กน้อยตอน hover */
+}
+
+.faq-item[open] {
+  box-shadow: 0 10px 30px rgba(37,99,235,0.08);
+}
+
+.faq-item summary {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.faq-item:hover summary {
+  color: var(--accent);
+}
+
+
+.faq-item[open] summary::before {
+  transform: translateY(-50%) translateX(20px) scale(0);
+  opacity: 0;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary:after {
+  content: '+';
+  float: right;
+  font-weight: 700;
+}
+
+.faq-item[open] summary:after {
+  content: '−';
+}
+
+/* Answer Text */
+.answer {
+  margin-top: 12px;
+  color: #111827;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.faq-item[open] .answer {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Category Colors */
+.faq-item[data-category="account"] {
+  background: linear-gradient(135deg, #C3EEFA 0%, #C3EEFA 100%);
+}
+
+.faq-item[data-category="payment"] {
+  background: linear-gradient(135deg, #C3EEFA 0%, #C3EEFA 100%);
+}
+
+.faq-item[data-category="technical"] {
+  background: linear-gradient(135deg, #C3EEFA 0%, #C3EEFA 100%);
+}
+
+.faq-item[data-category="privacy"] {
+  background: linear-gradient(135deg, #C3EEFA 0%, #C3EEFA 100%);
+}
+
+/* ================= Quick Tips ================= */
+.quick-tips {
+  margin-top: 18px;
+  padding: 16px;
+  text-align: center;
+}
+
+.quick-tips ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.quick-tips li {
+  margin-bottom: 6px;
+}
+
+/* ================= Footer ================= */
+.site-footer {
+  text-align: center;
+  padding: 9px 0;
+  background: #000;
+  color: white;
+  font-size: 14px;
+}
+
+/* ================= Links ================= */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================= Contact Extra ================= */
+.contact-extra {
+  margin-top: 30px;
+}
+
+/* ================= Cartoon Animation ================= */
+.cartoon {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  width: 250px;        /* ตัวการ์ตูนใหญ่ขึ้น */
+  max-width: 100%;
+  height: auto;
+  z-index: 9999;
+  transform: translateX(100%);
+  animation: slideInOut 6s ease-in-out infinite;
+}
+
+@keyframes slideInOut {
+  0%, 100% { transform: translateX(100%); opacity: 0; }
+  10%, 70% { transform: translateX(0); opacity: 1; }
+  90% { transform: translateX(100%); opacity: 0; }
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 880px) {
+  .main-grid { grid-template-columns: 1fr; }
+  .sidebar { order: 2; }
+  .faq-area { order: 1; }
+}
+.answer {
+  font-size: 14px;      /* ลดขนาดตัวอักษร */
+  line-height: 1.5;     /* ปรับให้ไม่สูงเกินไป */
+  margin-top: 12px;
+  color: #111827;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+
+}
+
+.faq-item[open] .answer {
+  max-height: 500px;
+  opacity: 1;
+}
+footer {
+  position: relative;      /* ให้ ::before อ้างอิง footer เอง */
+  background: var(--bg-gradient);     /* สีพื้นหลัง footer */
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;        /* ตัดส่วนเกินของ ::before */
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;                  /* ปรับเป็น 0 */
+  left: 0;                 /* ปรับเป็น 0 */
+  width: 100%;             /* ให้เต็มพอดี */
+  height: 100%;
+  background: radial-gradient(circle,
+              rgba(255, 255, 255, 0.15) 20%, transparent 60%);
+  animation: rotateGlow 10s linear infinite;
+  pointer-events: none;    /* ป้องกันการบังการคลิก */
+  z-index: 0;              /* อยู่ใต้ข้อความ */
+}
+
+footer a {
+  position: relative;      /* เพื่อให้อยู่เหนือ ::before */
+  z-index: 1;
+  color: #fffb;
+  text-decoration: none;
+}
+
+ 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-20px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50%      { transform: translateY(-10px);}
+}
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #60a5fa,0 0 10px #60a5fa;}
+  100% { text-shadow: 0 0 15px #93c5fd,0 0 30px #60a5fa;}
+}
+@keyframes rotateGlow {
+  from { transform: rotate(0deg);}
+  to   { transform: rotate(360deg);}
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav .menu { display: none; }
+  .problem-grid { grid-template-columns: 1fr; }
+}

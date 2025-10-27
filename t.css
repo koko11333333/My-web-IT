@@ -1,0 +1,251 @@
+:root {
+  --main-color: #3b82f6;        /* น้ำเงินสด */
+  --accent-color: #60a5fa;      /* ฟ้าอ่อน */
+  --bg-gradient: linear-gradient(135deg,#1e3a8a,#3b82f6);
+  --bg-light: #f8fafc;
+  --text-dark: #111827;
+  --text-gray: #4b5563;
+  --shadow-lg: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== Global ===== */
+body {
+  font-family: 'Prompt', sans-serif;
+  margin: 0;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ====== Header / Navigation ====== */
+nav {
+  background: var(--bg-gradient);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+  animation: fadeSlideDown 1s ease-out;
+}
+
+nav .logo img {
+  height: 55px;
+  transition: transform 0.4s;
+}
+nav .logo img:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+nav .menu a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+nav .menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #fff;
+  transition: width 0.3s;
+}
+nav .menu a:hover::after,
+nav .menu a.active::after {
+  width: 100%;
+}
+/* ====== Categories ====== */
+.categories {
+  padding:20px;
+  text-align:center;
+}
+
+.category-grid {
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.category-card {
+  padding:15px 20px;
+  border:2px solid #7986cb; /* น้ำเงินอ่อน */
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+  background:#c5cae9; /* น้ำเงินอ่อน */
+  font-weight:600;
+  color:#1a237e; /* น้ำเงินเข้มตัวอักษร */
+}
+
+.category-card:hover,
+.category-card.active {
+  border-color:#1a237e; /* น้ำเงินเข้ม */
+  background:#7986cb; /* น้ำเงินกลาง */
+  box-shadow:0 0 8px rgba(26,35,126,0.4);
+  color:white;
+}
+
+/* ====== PDF / Video Card ====== */
+.pdf-card, .video-card {
+  padding:10px;
+  background:#c5cae9; /* น้ำเงินอ่อน */
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  cursor:pointer;
+  transition: 0.3s;
+}
+
+.pdf-card img { 
+  width:100%; 
+  border-radius:8px; 
+}
+
+.pdf-card a.btn {
+  display:inline-block;
+  margin-top:8px;
+  padding:6px 15px;
+  background:#3949ab; /* น้ำเงินเข้ม */
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.pdf-card a.btn:hover {
+  background:#1a237e; /* น้ำเงินเข้มขึ้น */
+}
+
+/* hover / active effect */
+.pdf-card:hover,
+.video-card:hover,
+.pdf-card.active,
+.video-card.active {
+  background:#7986cb; /* น้ำเงินกลาง */
+  border: 2px solid #1a237e; /* น้ำเงินเข้ม */
+  box-shadow:0 4px 12px rgba(26,35,126,0.4);
+}
+
+h2 {
+  margin-bottom:10px;
+  text-align:center;
+  color:#1a237e; /* น้ำเงินเข้ม */
+}
+
+h3 {
+  color:#1a237e; /* น้ำเงินเข้ม */
+}
+
+footer {
+  position: relative;      /* ให้ ::before อ้างอิง footer เอง */
+  background: var(--bg-gradient);     /* สีพื้นหลัง footer */
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;        /* ตัดส่วนเกินของ ::before */
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;                  /* ปรับเป็น 0 */
+  left: 0;                 /* ปรับเป็น 0 */
+  width: 100%;             /* ให้เต็มพอดี */
+  height: 100%;
+  background: radial-gradient(circle,
+              rgba(255, 255, 255, 0.15) 20%, transparent 60%);
+  animation: rotateGlow 10s linear infinite;
+  pointer-events: none;    /* ป้องกันการบังการคลิก */
+  z-index: 0;              /* อยู่ใต้ข้อความ */
+}
+
+footer a {
+  position: relative;      /* เพื่อให้อยู่เหนือ ::before */
+  z-index: 1;
+  color: #fffb;
+  text-decoration: none;
+}
+
+ 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-20px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50%      { transform: translateY(-10px);}
+}
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #60a5fa,0 0 10px #60a5fa;}
+  100% { text-shadow: 0 0 15px #93c5fd,0 0 30px #60a5fa;}
+}
+@keyframes rotateGlow {
+  from { transform: rotate(0deg);}
+  to   { transform: rotate(360deg);}
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav .menu { display: none; }
+  .problem-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Swiper carousel effect */
+.swiper {
+  padding: 20px 0;
+}
+
+.pdf-slide, .video-slide {
+  width: 250px; /* กำหนดขนาดคงที่เพื่อสไลด์สวย */
+}
+
+.pdf-card, .video-card {
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.pdf-card:hover, .video-card:hover,
+.pdf-card.active, .video-card.active {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  background: #7986cb;
+  border: 2px solid #1a237e;
+}
+
+/* ปุ่ม navigation */
+.swiper-button-next, .swiper-button-prev {
+  color: #1a237e;
+}
+body::before {
+  content:"";
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background-image: url('img/2.png'); /* พาธภาพจริง */
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* อยู่ใต้เนื้อหา */
+  filter: blur(2px);
+}
+
+
+
+

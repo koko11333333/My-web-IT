@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แก้ไขปัญหาแบบ Magazine</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="t.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="โลโก้"></a>
+    <div class="menu">
+      <a href="index.html">หน้าแรก</a>
+      <a href="solve.html" class="active">แก้ปัญหาพื้นฐาน</a> 
+      <a href="learn.html">เรียนรู้อุปกรณ์</a>
+      <a href="quice.html">คำถามทั่วไป</a>
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="contact.html">ติดต่อเรา</a>
+      
+    </div>
+</nav>
+
+<section class="categories">
+  <h2>หมวดหมู่</h2>
+  <div class="category-grid">
+    <div class="category-card active" data-category="all">ทั้งหมด</div>
+    <div class="category-card" data-category="hardware">ฮาร์ดแวร์</div>
+    <div class="category-card" data-category="software">ซอฟต์แวร์</div>
+    <div class="category-card" data-category="network">เน็ตเวิร์ก</div>
+  </div>
+</section>
+
+<section class="pdf-carousel">
+  <h2>เอกสาร PDF</h2>
+  <div class="swiper pdf-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide pdf-slide" data-category="hardware" data-id="pdf0">
+        <div class="pdf-card">
+          <img src="img/upsp.png" alt="PDF 0">
+          <h3>ขั้นตอนเปลี่ยนแบตเครื่องสำรองไฟ UPS</h3>
+          <a href="t/ups.pdf" target="_blank" class="btn">ดาวน์โหลด</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide pdf-slide" data-category="software" data-id="pdf1">
+        <div class="pdf-card">
+          <img src="img/saraban2.png" alt="PDF 1">
+          <h3>ขั้นตอนการเปลี่ยน ใบรับรองอิเล็กทรอนิกส์</h3>
+          <a href="t/saraban.pdf" target="_blank" class="btn">ดาวน์โหลด</a>
+        </div>
+      </div>
+      <div class="swiper-slide pdf-slide" data-category="software" data-id="pdf2">
+        <div class="pdf-card">
+          <img src="img/out.png" alt="PDF 2">
+          <h3>ตั้งกฎ Rules Outlook</h3>
+          <a href="t/out.pdf" target="_blank" class="btn">ดาวน์โหลด</a>
+        </div>
+      </div>
+      <div class="swiper-slide pdf-slide" data-category="software" data-id="pdf3">
+        <div class="pdf-card">
+          <img src="img/printer.png" alt="PDF 3">
+          <h3>ขั้นตอนการ add printer</h3>
+          <a href="t/Addp.pdf" target="_blank" class="btn">ดาวน์โหลด</a>
+        </div>
+      </div>
+      <div class="swiper-slide pdf-slide" data-category="software" data-id="pdf4">
+        <div class="pdf-card">
+          <img src="img/helpdesk.png" alt="PDF 4">
+          <h3>ขั้นตอนการใช้ helpdesk</h3>
+          <a href="t/helpdesk.pdf" target="_blank" class="btn">ดาวน์โหลด</a>
+        </div>
+      </div>
+      <div class="swiper-slide pdf-slide" data-category="software" data-id="pdf5">
+        <div class="pdf-card">
+          <img src="img/keyboard.png" alt="PDF 5">
+          <h3>ขั้นตอนการตั้งค่าปุ่มเปลี่ยนภาษา(ใต้ Esc)</h3>
+          <a href="t/keyboard.pdf" target="_blank" class="btn">ดาวน์โหลด</a>
+        </div>
+      </div>
+
+        <div class="swiper-slide pdf-slide" data-category="network" data-id="pdf6">
+        <div class="pdf-card">
+          <img src="img/forget.png" alt="PDF 6">
+          <h3>วิธีforget wifi</h3>
+          <a href="t/Forget Wifi.pdf" target="_blank" class="btn">ดาวน์โหลด</a>
+        </div>
+      </div>
+      <div class="swiper-slide pdf-slide" data-category="network" data-id="pdf7">
+        <div class="pdf-card">
+          <img src="img/wifi.png" alt="PDF 7">
+          <h3>วิธีเข้า wifi</h3>
+          <a href="t/Wifi.pdf" target="_blank" class="btn">ดาวน์โหลด</a>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<section class="video-carousel">
+  <h2>วิดีโอ</h2>
+  <div class="swiper video-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide video-slide" data-category="hardware" data-related-pdf="pdf0">
+        <div class="video-card">
+          <iframe src="https://drive.google.com/file/d/1esQSNNZD1zDb80MJephR2i3aSUztwhOY/preview" 
+        width="100%" height="200" allow="autoplay" allowfullscreen></iframe>
+          <h3>แก้ปัญหา Hardware</h3>
+        </div>
+      </div>
+
+      <div class="swiper-slide video-slide" data-category="software" data-related-pdf="pdf1">
+        <div class="video-card">
+          <iframe src="https://drive.google.com/file/d/1cU-edeBUwyytQuLLc8A_L7MubKXB89lA/preview" 
+        width="100%" height="200" allow="autoplay" allowfullscreen></iframe>
+          <h3>ขั้นตอนการเปลี่ยน ใบรับรองอิเล็กทรอนิกส์</h3>
+        </div>
+      </div>
+      <div class="swiper-slide video-slide" data-category="software" data-related-pdf="pdf2">
+        <div class="video-card">
+           <iframe src="https://drive.google.com/file/d/1O3f1hh9i5fSRK0LB83dbcz1sKhACXpIp/preview" 
+        width="100%" height="200" allow="autoplay" allowfullscreen></iframe>
+          <h3>ตั้งกฎ Rules Outlook</h3>
+        </div>
+      </div>
+      <div class="swiper-slide video-slide" data-category="software" data-related-pdf="pdf3">
+        <div class="video-card">
+          <iframe src="https://drive.google.com/file/d/1L_7GlbZXaoWmasc6EaexjqtB5hXecRSK/preview" 
+        width="100%" height="200" allow="autoplay" allowfullscreen></iframe>
+          <h3>ขั้นตอนการ add printer</h3>
+        </div>
+      </div>
+      <div class="swiper-slide video-slide" data-category="software" data-related-pdf="pdf4">
+        <div class="video-card">
+          <iframe src="https://drive.google.com/file/d/1y1n_J7UhJeC48x05db4x5W5NtNcBk4K5/preview" 
+        width="100%" height="200" allow="autoplay" allowfullscreen></iframe>
+          <h3>ขั้นตอนการใช้ helpdesk</h3>
+        </div>
+      </div>
+      <div class="swiper-slide video-slide" data-category="software" data-related-pdf="pdf5">
+        <div class="video-card">
+          <iframe src="https://drive.google.com/file/d/1GEn_wCBPxz8kCv1ni72_UQ2thsu7Ir7b/preview" 
+        width="100%" height="200" allow="autoplay" allowfullscreen></iframe>
+          <h3>ขั้นตอนการตั้งค่าปุ่มเปลี่ยนภาษา(ใต้ Esc)</h3>
+        </div>
+      </div>
+
+      <div class="swiper-slide video-slide" data-category="network" data-related-pdf="pdf6">
+        <div class="video-card">
+         <iframe src="https://drive.google.com/file/d/1em5QdVJdLLOnlq5v74ZxzNC8n9qsVsTg/preview" 
+        width="100%" height="200" allow="autoplay" allowfullscreen></iframe>
+          <h3>วิธีforget wifi</h3>
+        </div>
+      </div>
+      <div class="swiper-slide video-slide" data-category="network" data-related-pdf="pdf7">
+        <div class="video-card">
+          <iframe src="https://drive.google.com/file/d/1PnVADk52Fe6rwgf4G45Bjf3IS8TlseM0/preview" 
+        width="100%" height="200" allow="autoplay" allowfullscreen></iframe>
+          <h3>เข้า wifi</h3>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<footer>
+    © 2025 Digital Technology Division.
+</footer>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJNW0ZG63F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QJNW0ZG63F');
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+const pdfSwiper = new Swiper(".pdf-swiper", {
+  slidesPerView: 1.2,
+  spaceBetween: 20,
+  slidesOffsetBefore: 20,
+  slidesOffsetAfter: 20,
+  navigation: {
+    nextEl: ".pdf-swiper .swiper-button-next",
+    prevEl: ".pdf-swiper .swiper-button-prev"
+  },
+  breakpoints: {
+    768: { slidesPerView: 2.2, spaceBetween: 30 },
+    1024: { slidesPerView: 3.2, spaceBetween: 40 }
+  }
+});
+
+const videoSwiper = new Swiper(".video-swiper", {
+  slidesPerView: 1.2,
+  spaceBetween: 20,
+  slidesOffsetBefore: 20,
+  slidesOffsetAfter: 20,
+  navigation: {
+    nextEl: ".video-swiper .swiper-button-next",
+    prevEl: ".video-swiper .swiper-button-prev"
+  },
+  breakpoints: {
+    768: { slidesPerView: 2.2, spaceBetween: 30 },
+    1024: { slidesPerView: 3.2, spaceBetween: 40 }
+  }
+});
+
+const categoryCards = document.querySelectorAll('.category-card');
+const pdfSlides = document.querySelectorAll('.pdf-slide');
+const videoSlides = document.querySelectorAll('.video-slide');
+const videos = document.querySelectorAll('.video-card video');
+
+let selectedCategory = 'all';
+let selectedPdfId = null;
+
+// ฟิลเตอร์หมวดหมู่
+categoryCards.forEach(cat => {
+  cat.addEventListener('click', () => {
+    selectedCategory = cat.dataset.category;
+    selectedPdfId = null;
+
+    categoryCards.forEach(c => c.classList.remove('active'));
+    cat.classList.add('active');
+
+    pdfSlides.forEach(pdf => {
+      pdf.style.display = (selectedCategory === 'all' || pdf.dataset.category === selectedCategory) ? 'block' : 'none';
+      pdf.querySelector('.pdf-card').classList.remove('active');
+    });
+    pdfSwiper.update();
+
+    videoSlides.forEach(video => {
+      video.style.display = (selectedCategory === 'all' || video.dataset.category === selectedCategory) ? 'block' : 'none';
+      video.querySelector('.video-card').classList.remove('active');
+      const vid = video.querySelector('video');
+      if(vid) vid.pause();
+    });
+    videoSwiper.update();
+  });
+});
+
+// ฟิลเตอร์ตาม PDF
+pdfSlides.forEach(pdf => {
+  pdf.addEventListener('click', () => {
+    const pdfCard = pdf.querySelector('.pdf-card');
+    if(pdfCard.classList.contains('active')) {
+      pdfCard.classList.remove('active');
+      selectedPdfId = null;
+      videoSlides.forEach(video => {
+        video.style.display = (selectedCategory === 'all' || video.dataset.category === selectedCategory) ? 'block' : 'none';
+        const vid = video.querySelector('video');
+        if(vid) vid.pause();
+      });
+      videoSwiper.update();
+    } else {
+      pdfSlides.forEach(p => p.querySelector('.pdf-card').classList.remove('active'));
+      pdfCard.classList.add('active');
+      selectedPdfId = pdf.dataset.id;
+      videoSlides.forEach(video => {
+        const vid = video.querySelector('video');
+        if(video.dataset.relatedPdf === selectedPdfId) {
+          video.style.display = 'block';
+        } else {
+          video.style.display = 'none';
+          if(vid) vid.pause();
+        }
+      });
+      videoSwiper.update();
+    }
+  });
+});
+
+// เล่นวิดีโอเฉพาะตัวที่กด
+videos.forEach(video => {
+  video.addEventListener('play', () => {
+    videos.forEach(v => {
+      if(v !== video) v.pause();
+    });
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // เลือกวิดีโอทุกตัวในหน้านี้
+  const videos = document.querySelectorAll("video");
+
+  videos.forEach((video, index) => {
+    // ถ้าวิดีโอยังไม่มี id → ตั้งชื่อ id ให้อัตโนมัติ
+    if (!video.id) {
+      video.id = "video" + (index + 1);
+    }
+
+    // เวลา user กด Play → ส่ง event ไป GA
+    video.addEventListener("play", function() {
+      gtag('event', 'video_play', {
+        'video_id': video.id,                // ชื่อ id ของวิดีโอ
+        'video_src': video.currentSrc,       // ไฟล์วิดีโอ
+        'page_path': window.location.pathname // หน้าที่เล่น
+      });
+      console.log("ส่ง event ไป GA:", video.id, video.currentSrc);
+    });
+  });
+});
+</script>
+
+
+</body>
+</html>

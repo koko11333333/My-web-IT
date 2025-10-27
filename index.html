@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="th">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เว็บสอน</title>
+  
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="in.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap" rel="stylesheet">
+  
+
+  <!-- Navbar -->
+<nav>
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="โลโก้"></a>
+    <div class="menu">
+      <a href="index.html" class="active">หน้าแรก</a>
+      <a href="solve.html" >แก้ปัญหาพื้นฐาน</a> 
+      <a href="learn.html" >เรียนรู้อุปกรณ์</a>
+      <a href="quice.html" >คำถามทั่วไป</a>
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="contact.html">ติดต่อเรา</a>
+    </div>
+</nav>
+
+    <div class="slider-wrapper">
+    <div class="swiper" data-aos="fade-up" data-aos-duration="600">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/1.1.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/1.2.png" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <!-- Problem Section -->
+ <div class="problem-section" data-aos="fade-down" data-aos-delay="200">
+  <div class="problem-header-box">
+    <h2>หากคุณกำลังพบปัญหาเหล่านี้</h2>
+    <h3>เราช่วยคุณได้!</h3>
+  </div>
+
+  <div class="problem-grid">
+    <div class="problem-box" data-aos="fade-right">เชื่อมเน็ตไม่ได้</div>
+    <div class="character" data-aos="fade-up"><img src="img/p.png" alt="ตัวการ์ตูน"></div>
+    <div class="problem-box" data-aos="fade-left">คอมไม่ติด</div>
+    <div class="problem-box" data-aos="fade-right">จอฟ้า</div>
+    <div></div>
+    <div class="problem-box" data-aos="fade-left">เครื่องสำรองไฟเสีย</div>
+  </div>
+</div>
+  <br>
+  <br>
+  <br>
+  <!-- ส่วนตรงกลางหัวข้อใหญ่ -->
+<div class="main-title" data-aos="fade-up">
+  <h2>ทำเว็บไซต์นี้เพื่ออะไร</h2>
+  <p>
+    เว็บไซต์นี้จัดทำขึ้นเพื่อสอนแก้ปัญหาคอมพิวเตอร์และเทคโนโลยีทั่วไป
+    ให้ผู้ใช้สามารถเรียนรู้และแก้ปัญหาได้ด้วยตนเอง
+  </p>
+</div>
+
+<!-- สามบล็อคด้านล่าง -->
+<section class="three-sections">
+  <!-- ซ้าย: แสดงความหมายเริ่มต้น -->
+  <div class="info-box left-box" data-aos="fade-up">
+    <h2>เลือกอุปกรณ์เพื่อดูความหมาย</h2>
+    <p>คลิกอุปกรณ์ตรงกลางเพื่อแสดงความหมาย</p>
+  </div>
+
+  <!-- กลาง: รายการอุปกรณ์ -->
+  <div class="info-box center-box" data-aos="fade-up" data-aos-delay="150">
+    <h2>รู้จักอุปกรณ์คอมพิวเตอร์</h2>
+    <ul id="device-list">
+      <li data-img="img/main1.png">เมนบอร์ด</li>
+      <li data-img="img/cpu.png">ซีพียู</li>
+      <li data-img="img/ssd.png">ฮาร์ดดิสก์</li>
+      <li data-img="img/ha.png">SSD</li>
+    </ul>
+  </div>
+
+  <!-- ขวา: รูปภาพประกอบ -->
+  <div class="info-box right-box" data-aos="fade-up" data-aos-delay="300">
+    <h2>ภาพประกอบ</h2>
+    <img id="device-preview" src="img/rr.jpg" alt="ภาพอุปกรณ์" />
+  </div>
+</section>
+  <br>
+  <br>
+  <br>
+
+<!-- ส่วนประวัติแบบสามบล็อค -->
+ <div class="main-title" data-aos="fade-up">
+  <h2>ประวัติ</h2>
+  <p>
+    ประวัติอุปกรณ์ต่างๆความเป็นมา
+  </p>
+</div>
+<section class="three-sections history-three" data-aos="fade-up">
+
+  <!-- ซ้าย: แสดงประวัติเมื่อคลิก -->
+  <div class="info-box left-box">
+    <h2>เลือกหัวข้อเพื่อดูประวัติ</h2>
+    <p>คลิกหัวข้อประวัติทางกลางเพื่อดูรายละเอียด</p>
+  </div>
+
+  <!-- กลาง: รายการหัวข้อประวัติ -->
+  <div class="info-box center-box">
+    <h2>หัวข้อประวัติ</h2>
+    <ul id="history-list">
+      <li data-img="img/in.jpg">CPU</li>
+      <li data-img="img/ram.jpg">RAM</li>
+      <li data-img="img/ssd.png">SSD</li>
+      <li data-img="img/hdd.jpg">HDD</li>
+    </ul>
+  </div>
+
+  <!-- ขวา: รูปประกอบ -->
+  <div class="info-box right-box">
+    <h2>รูปประกอบ</h2>
+    <img id="history-preview" src="img/pa.jpg" alt="รูปประวัติ" />
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Digital Technology Division.s
+  </footer>
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJNW0ZG63F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QJNW0ZG63F');
+</script>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  autoplay: { delay: 4000, disableOnInteraction: false },
+  pagination: { el: ".swiper-pagination", clickable: true },
+  navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+
+  on: {
+    slideChangeTransitionStart: function () {
+      // รีเซ็ตภาพสไลด์ก่อนหน้า กลับไปขนาดใหญ่
+      this.slides.forEach(slide => {
+        const img = slide.querySelector("img");
+        if (img) img.style.transform = "scale(1.05)";
+      });
+    },
+    slideChangeTransitionEnd: function () {
+      // สไลด์ active ค่อยๆ zoom out
+      const activeImg = this.slides[this.activeIndex].querySelector("img");
+      if (activeImg) {
+        activeImg.style.transform = "scale(1)"; // ค่อยๆ ลดกลับขนาดปกติ
+      }
+    }
+  }
+});
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+  </script>
+  <script>
+document.querySelectorAll('#device-list li').forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.getAttribute('data-img');
+    document.getElementById('device-preview').src = img;
+  });
+});
+
+
+// --- สำหรับส่วนอุปกรณ์ ---
+const deviceDescriptions = {
+  "เมนบอร์ด": "เมนบอร์ดคือแผงวงจรหลักของคอมพิวเตอร์ ที่เชื่อมต่อทุกส่วนเข้าด้วยกัน",
+  "ซีพียู": "ซีพียูคือสมองของคอมพิวเตอร์ ทำหน้าที่ประมวลผลคำสั่งทั้งหมด",
+  "ฮาร์ดดิสก์": "ฮาร์ดดิสก์คือที่เก็บข้อมูลของคอมพิวเตอร์ ใช้บันทึกไฟล์และโปรแกรมต่าง ๆ",
+  "SSD": "SSD คือหน่วยเก็บข้อมูลความเร็วสูง ทำให้เครื่องทำงานเร็วขึ้น"
+};
+
+const deviceList = document.querySelectorAll('#device-list li');
+const devicePreview = document.getElementById('device-preview');
+const deviceLeftBoxTitle = document.querySelector('.three-sections .left-box h2');
+const deviceLeftBoxText = document.querySelector('.three-sections .left-box p');
+
+deviceList.forEach(item => {
+  item.addEventListener('click', () => {
+    // เปลี่ยนรูปภาพฝั่งขวา
+    const imgSrc = item.getAttribute('data-img');
+    devicePreview.src = imgSrc;
+
+    // เปลี่ยนข้อความฝั่งซ้าย
+    const deviceName = item.textContent;
+    deviceLeftBoxTitle.textContent = deviceName;
+    deviceLeftBoxText.textContent = deviceDescriptions[deviceName] || 'ไม่พบคำอธิบาย';
+
+    // ไฮไลต์อุปกรณ์ที่เลือก
+    deviceList.forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+  });
+});
+
+// --- สำหรับส่วนประวัติ ---
+const historyDescriptions = {
+  "CPU": "CPU หรือ “สมองของคอมพิวเตอร์” เริ่มต้นขึ้นจาก Intel 4004 ในปี 1971 ซึ่งเป็นโปรเซสเซอร์ตัวแรกที่ใช้ในคอมพิวเตอร์ส่วนบุคคล มีความเร็วในการประมวลผลต่ำมากเพียง 740 kHz และประมวลผลได้ทีละ 4 บิต ต่อมา Intel พัฒนาต่อเป็น 8008, 8080 และซีรีส์ 8086 ซึ่งถือเป็นจุดเริ่มต้นของคอมพิวเตอร์สถาปัตยกรรม x86 ที่ใช้มาจนถึงปัจจุบัน CPU ในยุคแรกยังมีขนาดใหญ่และต้องใช้ระบบระบายความร้อนแบบพัดลม ต่อมา CPU ถูกพัฒนาให้มีประสิทธิภาพสูงขึ้น, ความเร็วสัญญาณนาฬิกาเพิ่มขึ้น, จำนวนคอร์มากขึ้น และใช้เทคโนโลยีการผลิตที่เล็กลง ทำให้คอมพิวเตอร์ทำงานเร็วและประหยัดพลังงานมากขึ้น",
+  "RAM": "ก่อนที่ RAM จะถูกพัฒนาขึ้นมา หน่วยความจำของคอมพิวเตอร์ในยุคนั้นจะใช้สิ่งที่เรียกว่า Drum Memory มันเป็นอุปกรณ์ที่ประกอบขึ้นมาด้วยกระบอกโลหะ (Metal Cylinder) จำนวนมาก โดยภายในนั้นจะมีข้อมูลที่ถูกโปรแกรมเอาไว้ให้ล่วงหน้าแล้ว ถัดจาก Drum Memory ก็ตามมาด้วย Magnetic-core memory (หรือ Core memory) เป็นเทคโนโลยีที่กล่าวได้ว่าเป็นบรรพบุรุษของ RAM ที่ใช้งานกันอยู่ในปัจจุบันนั่นเอง",
+  "SSD": "จุดเริ่มต้นของ SSD ย้อนไปปี 1978 เมื่อ StorageTeK สร้างต้นแบบแรก แต่ใช้ RAM แทน Flash Memory ต่อมา Toshiba นำ Flash Memory มาใช้และขายจริงเป็นรายแรก แม้ ssd ยุคนั้นจะเร็วกว่าฮาร์ดดิสก์มาก แต่ความจุน้อยและราคาแพงจึงไม่นิยม จนกระทั่งปี 1995 M-Systems เปิดตัว SSD ที่ใช้ NAND Flash ซึ่งมีความจุสูงและราคาถูกกว่า ทำให้ SSD ส่วนใหญ่ใช้ NAND Flash เป็นหลัก และต้องรออีกกว่า 20 ปี SSD จึงเป็นที่นิยมด้วยเทคโนโลยี ความจุ และราคาที่เหมาะสมกับการใช้งานจริง",
+  "HDD": "ในปี พ.ศ. 2499 หรือเกือบหกสิบปีมาแล้วIBMได้เปิดตัวฮาร์ดดิสก์ไดรฟ์รุ่นแรกที่เรารู้จัก ระบบ 305 RAMACมาพร้อมกับจานอ่าน/เขียนขนาด 24 นิ้ว จำนวน 50 จาน และมีความจุรวม 5MB 305 RAMAC ใช้เพียงชุดอ่าน/เขียนชุดเดียวที่มีหัวอ่านสองหัวเพื่อเข้าถึงจานอ่านแต่ละจาน จึงมีเวลาในการเข้าถึงเกือบหนึ่งวินาที นอกจากนี้ยังมีขนาดใกล้เคียงกับตู้เย็นในครัวเรือนสองเครื่องที่วางเรียงกัน"
+};
+
+const historyList = document.querySelectorAll('#history-list li');
+const historyLeftBoxTitle = document.querySelector('.history-three .left-box h2');
+const historyLeftBoxText = document.querySelector('.history-three .left-box p');
+const historyPreview = document.getElementById('history-preview');
+
+historyList.forEach(item => {
+  item.addEventListener('click', () => {
+    // เปลี่ยนข้อความซ้าย
+    historyLeftBoxTitle.textContent = item.textContent;
+    historyLeftBoxText.textContent = historyDescriptions[item.textContent];
+
+    // เปลี่ยนรูปทางขวา
+    const imgSrc = item.getAttribute('data-img');
+    historyPreview.src = imgSrc;
+
+    // ไฮไลต์หัวข้อที่เลือก
+    historyList.forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+  });
+});
+
+
+</script>
+</body>
+</html>
